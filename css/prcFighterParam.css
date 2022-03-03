@@ -1,0 +1,243 @@
+.button-parent:hover #open{
+    background-color: #375A7F;
+}
+
+.button-parent:hover #save{
+    background-color: #00BC8C;
+}
+
+.button-parent:hover #default{
+    background-color: darkgray;
+}
+
+.button-parent:hover #randomizeBtn{
+    background-color: #E74C3C;
+}
+
+.button-parent:hover #optionsBtn{
+    background-color: #3498DB;
+}
+
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+.message{
+    display: none;
+}
+
+.loading{
+    display: none;
+    animation: fadein 2s infinite;
+    -moz-animation: fadein 2s infinite; /* Firefox */
+    -webkit-animation: fadein 2s infinite; /* Safari and Chrome */
+    -o-animation: fadein 2s infinite; /* Opera */
+}
+
+.main {
+    text-align: center;
+}
+
+.group {
+    display: inline;
+}
+
+.group-input label {
+    text-align: right;
+}
+
+.input-value {
+    float: right;
+
+}
+
+#randomValues {
+    display: inline;
+    overflow: hidden;
+}
+
+hr {
+    border-color: black;
+}
+
+.form-check {
+    float: right;
+    clear: both;
+    margin-top: .45rem;
+}
+
+.random_input_section {
+    display: none;
+}
+
+.tab-page{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.05fr;
+    gap: 0px 50px;
+    grid-template-areas:
+      "Left Right";
+}
+
+.buttons .active{
+    background-color: darkgray;
+}
+
+.main-section{
+    width: 50%;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    font-size: 15px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid black;
+    width: 25%;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+.button-parent{
+    width: 85px;
+}
+
+.button-parent button{
+    width: 85px;
+}
+
+.form-group-inline{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". .";
+    align-items: center;
+}
+
+.form-group-multiple-chara{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". .";
+}
+
+.form-chara-check{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". .";
+    align-items: center;
+}
+
+.form-group-check{
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". .";
+    align-items: center;
+}
+
+.form-group-check label{
+    text-align: left;
+}
+
+.form-group-inline label{
+    text-align: left;
+}
