@@ -757,6 +757,14 @@ class Audio
     }
 
     public function handleLoop(){
+        if(!is_numeric($this->loopStart)){
+            $this->loopStart = 0;
+        }
+
+        if(!is_numeric($this->loopEnd)){
+            $this->loopEnd = 0;
+        }
+
         if ($this->loop && $this->usePyMusicLooper) { // Loop based on pymusiclooper
             $this->findLoopPoints();
         } else if ($this->loop && $this->loopEnd <= 0) { // Loop E -> S if loopEnd is equal or below 0 and looping is enabled
