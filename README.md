@@ -28,16 +28,17 @@ This is a re-write of the original [Smash Ultimate Tools](https://github.com/Coo
 ## Setting Up
 1. Download and extract [PHP](https://windows.php.net/download) to a folder on your PC (7.0 minimum)
 2. Add the path where you extracted `PHP` to your System PATH Environment Variable
-3. Download and install [dotnet 2.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-2.0.9-windows-x64-installer)
-4. Make sure `dotnet` is in your path (run the `dotnet` command in Command Prompt and see if it runs)
-5. If it doesn't run, then add the path where `dotnet` was installed to your System PATH Environment Variable
-6. Download this repo and extract it somewhere on your PC
-7. Open up command prompt and navigate to the repo folder
-8. Run the following command
+3. Edit `php.ini` and increase the `post_max_size` and `upload_max_filesize`, and change `file_uploads` value to `On` 
+4. Download and install [dotnet 2.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-2.0.9-windows-x64-installer)
+5. Make sure `dotnet` is in your path (run the `dotnet` command in Command Prompt and see if it runs)
+6. If it doesn't run, then add the path where `dotnet` was installed to your System PATH Environment Variable
+7. Download this repo and extract it somewhere on your PC
+8. Open up command prompt and navigate to the repo folder
+9. Run the following command
 ```
 php -S localhost:80
 ```
-9. In your web browser, go to `http://localhost/`
+10. In your web browser, go to `http://localhost/`
 
 
 ### Optional Stuff
