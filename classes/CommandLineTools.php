@@ -25,7 +25,7 @@ class CommandLineTools {
     
     public static function RunVGAudio($args){
         $args = CommandLineTools::SetupArgs($args);
-        return shell_exec("\"%CD%\\tools\\vgaudio\\VGAudioCli.exe\" {$args}");
+        return shell_exec("dotnet \"%CD%\\tools\\vgaudio\\VGAudioCli.dll\" {$args}");
     }
     
     public static function RunNUS3Audio($args){

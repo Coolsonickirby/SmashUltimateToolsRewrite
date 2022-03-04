@@ -28,23 +28,14 @@
 
     <?php
     if (isset($_SESSION["message"])) {
-        if ($_SESSION["message"]["passed"]) {
-            echo "
-                <div class=\"card\">
-                    <div>
-                        <h2 class=\"text-success\">Success!</h2>
-                        {$_SESSION['message']['message']}
-                    </div>
-                </div>";
-        } else if (!$_SESSION["message"]["passed"]) {
-            echo "
-                <div class=\"card\">
-                    <div>
-                        <h2 class=\"text-error\">Error!</h2>
-                        {$_SESSION['message']['message']}
-                    </div>
-                </div>";
-        }
+        $status = $_SESSION["message"]["passed"] ? array("text-success", "Success!") : array("text-error", "Error!");
+        echo "
+            <div class=\"card\">
+                <div>
+                    <h2 class=\"{$status[0]}\">{$status[1]}</h2>
+                    {$_SESSION['message']['message']}
+                </div>
+            </div>";
         unset($_SESSION["message"]);
     }
     ?>

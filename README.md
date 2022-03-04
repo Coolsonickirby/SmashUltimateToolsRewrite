@@ -25,6 +25,35 @@ This is a re-write of the original [Smash Ultimate Tools](https://github.com/Coo
 - Common Color Editor
   - Added
 
+## Setting Up
+1. Download and extract [PHP](https://windows.php.net/download) to a folder on your PC (7.0 minimum)
+2. Add the path where you extracted `PHP` to your System PATH Environment Variable
+3. Download and install [dotnet 2.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-2.0.9-windows-x64-installer)
+4. Make sure `dotnet` is in your path (run the `dotnet` command in Command Prompt and see if it runs)
+5. If it doesn't run, then add the path where `dotnet` was installed to your System PATH Environment Variable
+6. Download this repo and extract it somewhere on your PC
+7. Open up command prompt and navigate to the repo folder
+8. Run the following command
+```
+php -S localhost:80
+```
+9. In your web browser, go to `http://localhost/`
+
+
+### Optional Stuff
+#### YouTube Conversion Support
+1. Download and extract [FFmpeg](https://www.gyan.dev/ffmpeg/builds/) (make sure you download a `release build`) somewhere on your PC
+2. Add the path where you extracted `FFmpeg` to your System PATH Environment Variable
+
+#### PyMusicLooper Support
+1. Download and install [Python](https://www.python.org/downloads/) (3.8 or higher)
+2. Make sure to check `Add to PATH` when installing Python
+3. Open up command prompt and run the following command
+```
+pip install git+https://github.com/arkrow/PyMusicLooper.git
+```
+
+
 ## Credits
 
 ### Main
