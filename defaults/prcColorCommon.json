@@ -1,0 +1,1113 @@
+{
+    "?xml": {
+        "@version": "1.0",
+        "@encoding": "UTF-8"
+    },
+    "struct": {
+        "list": [
+            {
+                "@size": "35",
+                "@hash": "com_color_table",
+                "struct": [
+                    {
+                        "@index": "0",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_1p"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "254"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "54"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "54"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "1",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_2p"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "46"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "137"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "255"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "2",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_3p"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "187"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "16"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "3",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_4p"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "40"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "180"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "72"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "4",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_5p"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "249"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "134"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "54"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "5",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_6p"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "44"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "210"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "234"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "6",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_7p"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "155"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "180"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "7",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_8p"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "149"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "112"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "255"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "8",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_cp"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "172"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "172"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "172"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "9",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "player_fp"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "255"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "10",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "team_1"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "254"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "54"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "54"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "11",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "team_2"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "46"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "137"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "255"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "12",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "team_3"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "40"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "180"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "72"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "13",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "team_4"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "187"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "16"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "14",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "team_none"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "255"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "15",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "mii_ft"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "29"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "29"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "16",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "mii_sd"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "0"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "160"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "233"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "17",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "mii_gn"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "251"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "162"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "35"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "18",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "spirit_attacker_offense"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "237"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "63"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "63"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "19",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "spirit_attacker_defense"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "29"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "173"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "248"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "20",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "spirit_attacker_throw"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "29"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "186"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "29"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "21",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "spirit_attacker_non"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "121"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "100"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "129"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "22",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "spirit_supporter"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "179"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "179"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "179"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "23",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_1"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "210"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "30"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "20"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "24",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_2"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "110"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "25"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "25",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_3"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "216"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "32"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "26",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_4"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "120"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "210"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "32"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "27",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_5"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "0"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "120"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "48"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "28",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_6"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "10"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "72"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "80"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "29",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_7"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "60"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "170"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "222"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "30",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_8"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "245"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "90"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "125"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "31",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_9"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "115"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "40"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "173"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "32",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_10"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "72"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "56"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "24"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "33",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_11"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "224"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "224"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "224"
+                            }
+                        ]
+                    },
+                    {
+                        "@index": "34",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "tag_bg_12"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "24"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "24"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "20"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "@size": "7",
+                "@hash": "dmg_color_table",
+                "struct": [
+                    {
+                        "@index": "0",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "damage_00"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "255"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "12"
+                        }
+                    },
+                    {
+                        "@index": "1",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "damage_01"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "205"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "4"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "35"
+                        }
+                    },
+                    {
+                        "@index": "2",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "damage_02"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "152"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "4"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "50"
+                        }
+                    },
+                    {
+                        "@index": "3",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "damage_03"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "76"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "5"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "75"
+                        }
+                    },
+                    {
+                        "@index": "4",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "damage_04"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "0"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "0"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "100"
+                        }
+                    },
+                    {
+                        "@index": "5",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "damage_05"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "170"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "0"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "52"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "170"
+                        }
+                    },
+                    {
+                        "@index": "6",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "damage_06"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "122"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "0"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "37"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "300"
+                        }
+                    }
+                ]
+            },
+            {
+                "@size": "7",
+                "@hash": "hp_color_table",
+                "struct": [
+                    {
+                        "@index": "0",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "hp_00"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "255"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "94"
+                        }
+                    },
+                    {
+                        "@index": "1",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "hp_01"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "205"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "4"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "82"
+                        }
+                    },
+                    {
+                        "@index": "2",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "hp_02"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "152"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "4"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "75"
+                        }
+                    },
+                    {
+                        "@index": "3",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "hp_03"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "76"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "5"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "62"
+                        }
+                    },
+                    {
+                        "@index": "4",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "hp_04"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "255"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "0"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "0"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "50"
+                        }
+                    },
+                    {
+                        "@index": "5",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "hp_05"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "170"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "0"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "52"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "15"
+                        }
+                    },
+                    {
+                        "@index": "6",
+                        "hash40": {
+                            "@hash": "color_id",
+                            "#text": "hp_06"
+                        },
+                        "byte": [
+                            {
+                                "@hash": "color_r",
+                                "#text": "122"
+                            },
+                            {
+                                "@hash": "color_g",
+                                "#text": "0"
+                            },
+                            {
+                                "@hash": "color_b",
+                                "#text": "37"
+                            }
+                        ],
+                        "ushort": {
+                            "@hash": "value",
+                            "#text": "0"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

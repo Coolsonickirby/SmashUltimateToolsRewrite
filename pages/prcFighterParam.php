@@ -53,7 +53,7 @@
         </div>
 
         <div class="button-parent">
-            <button class="tablinks" id="default" onclick="window.location.href = this.getAttribute('data-href')" data-href="./index.php?page=prcFighterParam&id=prcFighterParam" id="save">Load Default</button>
+            <button class="tablinks" id="default" onclick="window.location.href = this.getAttribute('data-href')" data-href="./index.php?page=prcFighterParam&id=prcFighterParam">Load Default</button>
         </div>
 
         <div class="button-parent">

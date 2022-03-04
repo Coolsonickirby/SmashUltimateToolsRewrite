@@ -1,0 +1,62 @@
+.button-parent:hover #open {
+    background-color: #375A7F;
+}
+
+.button-parent:hover #save {
+    background-color: #00BC8C;
+}
+
+.button-parent:hover #default {
+    background-color: darkgray;
+}
+
+.button-parent:hover #randomizeBtn {
+    background-color: #E74C3C;
+}
+
+.button-parent:hover #optionsBtn {
+    background-color: #3498DB;
+}
+
+#main-section {
+    width: 50%;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.button-parent {
+    width: 85px;
+}
+
+.button-parent button {
+    width: 85px;
+}
+
+.tab-page {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px 0px;
+    grid-template-areas: ". . . .";
+    justify-items: center;
+}
+
+.input-form {
+    font-weight: bold;
+    text-align: center;
+}
+
+.input-form>input {
+    width: 100px;
+}
