@@ -13,6 +13,7 @@ if(isset($_GET["outputName"])){
     <title>MSBT Editor</title>
     <link rel="stylesheet" href="./css/new-front-page.css">
     <link rel="stylesheet" href="./css/msbt.css">
+    <link rel="icon" type="image/x-icon" href="./img/tools_favicon.ico">
 </head>
 
 <body>

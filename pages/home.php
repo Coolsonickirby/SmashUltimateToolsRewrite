@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smash Ultimate Tools</title>
     <link rel="stylesheet" href="./css/new-front-page.css">
+    <link rel="icon" type="image/x-icon" href="./img/tools_favicon.ico">
     <style>
         .hide {
             display: none;

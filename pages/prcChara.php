@@ -7,6 +7,7 @@
     <title>Smash Ultimate CSS Editor</title>
     <link rel="stylesheet" href="./css/new-front-page.css">
     <link rel="stylesheet" href="./css/prcChara.css">
+    <link rel="icon" type="image/x-icon" href="./img/tools_favicon.ico">
     <style>
         .header-mobile {
             grid-template-rows: 1fr !important;

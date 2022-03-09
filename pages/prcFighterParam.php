@@ -8,6 +8,7 @@
     <script src="./js/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="./css/new-front-page.css">
     <link rel="stylesheet" href="./css/prcFighterParam.css">
+    <link rel="icon" type="image/x-icon" href="./img/tools_favicon.ico">
     <style>
         @media only screen and (max-width:1460px) {
             .main-section {

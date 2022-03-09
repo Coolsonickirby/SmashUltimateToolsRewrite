@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=1024">
     <link rel="stylesheet" href="./css/new-front-page.css">
     <link rel="stylesheet" href="./css/prcColorCommon.css">
+    <link rel="icon" type="image/x-icon" href="./img/tools_favicon.ico">
     <script src="./js/jquery-3.4.1.min.js"></script>
     <style>
         .header-mobile {
