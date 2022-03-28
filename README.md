@@ -12,6 +12,7 @@ This is a re-write of the original [Smash Ultimate Tools](https://github.com/Coo
   - Added new conversion option: wav
   - Removed `Convert Song to Compatible wav` & `Convert vgmstream compatible formats to wav` pages
   - Removed old style editor for the `Replace nus3audio sound banks with idsps` page
+  - Proper Error Handling
 - CSS Editor
   - No Changes
 - SSS Editor
@@ -29,7 +30,7 @@ This is a re-write of the original [Smash Ultimate Tools](https://github.com/Coo
 1. Download and extract [PHP](https://windows.php.net/download) to a folder on your PC (7.0 minimum)
 2. Add the path where you extracted `PHP` to your System PATH Environment Variable
 3. Edit `php.ini` and increase the `post_max_size` and `upload_max_filesize`, and change `file_uploads` value to `On` 
-4. Download and install [dotnet 2.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-2.0.9-windows-x64-installer)
+4. Download and install [dotnet 2.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-2.0.9-windows-x64-installer), [dotnet 5.0.3](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-5.0.3-windows-x64-installer), and [dotnet 6.0.3](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.3-windows-x86-installer)
 5. Make sure `dotnet` is in your path (run the `dotnet` command in Command Prompt and see if it runs)
 6. If it doesn't run, then add the path where `dotnet` was installed to your System PATH Environment Variable
 7. Download this repo and extract it somewhere on your PC
@@ -49,11 +50,12 @@ php -S localhost:80
 #### PyMusicLooper Support
 1. Download and install [Python](https://www.python.org/downloads/) (3.8 or higher)
 2. Make sure to check `Add to PATH` when installing Python
-3. Open up command prompt and run the following command
+3. Download and install [Git](https://git-scm.com/downloads)
+4. Make sure to check `Add to PATH` when installing Git (if that option shows up)
+5. Open up command prompt and run the following command
 ```
 pip install git+https://github.com/arkrow/PyMusicLooper.git
 ```
-
 
 ## Credits
 

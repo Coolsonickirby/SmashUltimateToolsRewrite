@@ -688,6 +688,10 @@ class Audio
     {
         $info = CommandLineTools::RunSOX(array("--i", "{$this->audioPath}"));
 
+        if(!file_exists($this->audioPath)){
+            return Utils::createMessage(false, $info);
+        }
+
         preg_match("/(?<=Sample Rate    : )(.*)(?=\n)/", $info, $tmp);
         $this->sampleRate = intval($tmp[0]);
 
@@ -699,12 +703,12 @@ class Audio
 
         $this->format = pathinfo($this->audioPath, PATHINFO_EXTENSION);
 
-        return array(
+        return Utils::createMessage(true, array(
             "sampleRate" => $this->sampleRate,
             "duration" => $this->duration,
             "channels" => $this->channels,
             "format" => $this->format
-        );
+        ));
     }
 
     public function convertFromVGMStream($outputPath, $useVGMStreamInfo)
@@ -717,6 +721,10 @@ class Audio
             $this->vgmStreamIndex,
             $this->audioPath
         ));
+
+        if(!file_exists($log)){
+            return Utils::createMessage(false, $log);
+        }
 
         if($this->useVGMStreamLoopInfo){
             preg_match("/(?<=loop start: )(.*)(?= samples)/", $log, $tmp);
@@ -736,7 +744,7 @@ class Audio
 
         $this->format = "wav";
 
-        return $outputPath;
+        return Utils::createMessage(true, $outputPath);
     }
 
     public static function convertToWAV($inputPath, $outputPath, $sampleRate = 48000)
@@ -753,7 +761,12 @@ class Audio
                 $outputPath
             )
         );
-        return $outputPath;
+
+        if(!file_exists($outputPath)){
+            return Utils::createMessage(false, $log);
+        }
+
+        return Utils::createMessage(true, $outputPath);
     }
 
     public function handleLoop(){
@@ -785,7 +798,12 @@ class Audio
         // Convert to WAV if any one of the requirements are not met
         if ($this->format != "wav" || $this->sampleRate != 48000 || $this->channels > 2) {
             mkdir("./tmp/wav/", 0777, true);
-            $this->audioPath = Audio::convertToWAV($this->audioPath, "./tmp/wav/{$this->id}.wav", 48000);
+            $wavLog = Audio::convertToWAV($this->audioPath, "./tmp/wav/{$this->id}.wav", 48000);
+            if(!$wavLog["passed"]){
+                return $wavLog;
+            }
+
+            $this->audioPath = $wavLog["message"];
         }
 
         $this->handleLoop();
@@ -806,7 +824,11 @@ class Audio
         $log = CommandLineTools::RunVGAudio(array_merge(array("-i", $this->audioPath, "-o", $outputPath), $lopusArgs));
         $this->audioPath = $originalPath;
 
-        return $outputPath;
+        if(!file_exists($outputPath)){
+            return Utils::createMessage(false, $log);
+        }
+
+        return Utils::createMessage(true, $outputPath);
     }
 
     public function createGeneric($outputPath, $bitrate)
@@ -838,7 +860,11 @@ class Audio
         $log = CommandLineTools::RunVGAudio(array_merge(array("-i", $this->audioPath, "-o", $outputPath), $genericArgs));
         $this->audioPath = $originalPath;
 
-        return $outputPath;
+        if(!file_exists($outputPath)){
+            return Utils::createMessage(false, $log);
+        }
+
+        return Utils::createMessage(true, $outputPath);
     }
 
     private function recalculateLoopSamples($srcHz, $targetHz)
@@ -862,7 +888,14 @@ class Audio
     {
         $outputPath = str_replace("{id}", $this->id, $outputPath);
         $originalPath = $this->audioPath;
-        $this->audioPath = $this->createLopus("./tmp/lopus/{id}.lopus", $bitrate);
+        $lopusLog = $this->createLopus("./tmp/lopus/{id}.lopus", $bitrate);
+        
+        if(!$lopusLog["passed"]){
+            return $lopusLog;
+        }
+
+        $this->audioPath = $lopusLog["message"];
+        
         Utils::createPathWithoutFilename($outputPath);
 
         $nus3audioArgs = array(
@@ -875,10 +908,13 @@ class Audio
         );
 
         $log = CommandLineTools::RunNUS3Audio($nus3audioArgs);
-
         $this->audioPath = $originalPath;
 
-        return $outputPath;
+        if(!file_exists($outputPath)){
+            return Utils::createMessage(false, $log);
+        }
+
+        return Utils::createMessage(true, $outputPath);
     }
 
     public function __construct()
@@ -892,18 +928,23 @@ class Audio
 
         // Assume it's a YT Link if audioPath starts with HTTP
         if (substr($this->audioPath, 0, 4) === "http") {
+            $outputPath = "./tmp/yt/{$this->id}.mp3";
             $ytDLPArgs = array(
                 "-x",
                 "--audio-format",
                 "mp3",
                 "-o",
-                "./tmp/yt/{$this->id}.mp3",
+                $outputPath,
                 $this->audioPath
             );
 
-            CommandLineTools::RunYTDLP($ytDLPArgs);
+            $log = CommandLineTools::RunYTDLP($ytDLPArgs);
 
-            $this->audioPath = "./tmp/yt/{$this->id}.mp3";
+            if(!file_exists($outputPath)){
+                return Utils::createMessage(false, $log);
+            }
+
+            $this->audioPath = $outputPath;
         }
 
         $this->loopStart = $loopStart;
@@ -915,7 +956,10 @@ class Audio
         if (in_array($extension, Audio::$vgmstream_extensions)) {
             $outputPath = "./tmp/vgmstream/{$this->id}.wav";
             Utils::createPathWithoutFilename($outputPath);
-            $this->audioPath = $this->convertFromVGMStream($outputPath, true);
+            $vgmLog = $this->convertFromVGMStream($outputPath, true);
+            if($vgmLog["passed"]){
+                $this->audioPath = $vgmLog["message"];
+            }
         } else {
             $this->getAudioInformation();
         }

@@ -80,7 +80,17 @@ class Controller {
                 };
             }
 
-            $audio->initalize($targetPath, $loopStart, $loopEnd, $loopSampleRate);
+            $res = $audio->initalize($targetPath, $loopStart, $loopEnd, $loopSampleRate);
+
+            if(isset($res)){
+                if(!$res["passed"]){
+                    $_SESSION["message"] = array(
+                        "passed" => false,
+                        "message" => "<p class=\"card-text\">Conversion Failed! Here's a log of the error:<br /><pre>{$res['message']}</pre></p></p>"
+                    );
+                    Controller::redirect("./index.php?page=audio");
+                }
+            }
 
             $outputPath = "{$_POST['filenameOutput']}";
             $bitrate = intval($_POST["bitrate"]);
@@ -88,46 +98,35 @@ class Controller {
             if ($_POST["target"] === 'nus3audio') {
                 $outputPath = "./out/nus3audio/{id}/{$outputPath}.nus3audio";
                 $result = $audio->createNUS3AUDIO($outputPath, "SmashUltimateTools (Converted from {$ext})", $bitrate);
-                $_SESSION["message"] = array(
-                    "passed" => true,
-                    "message" => "<p class=\"card-text\">nus3audio Conversion Complete! You can download it from <a class=\"return_link\" href=\"{$result}\">here!</a></p>"
-                );
             } else if ($_POST["target"] === 'lopus') {
                 $outputPath = "./out/lopus/{id}/{$outputPath}.lopus";
                 $result = $audio->createLopus($outputPath, $bitrate);
-                $_SESSION["message"] = array(
-                    "passed" => true,
-                    "message" => "<p class=\"card-text\">lopus Conversion Complete! You can download it from <a class=\"return_link\" href=\"{$result}\">here!</a></p>"
-                );
             } else if ($_POST["target"] === 'idsp') {
                 $outputPath = "./out/idsp/{id}/{$outputPath}.idsp";
                 $result = $audio->createGeneric($outputPath, $bitrate);
-                $_SESSION["message"] = array(
-                    "passed" => true,
-                    "message" => "<p class=\"card-text\">IDSP Conversion Complete! You can download it from <a class=\"return_link\" href=\"{$result}\">here!</a></p>"
-                );
             } else if ($_POST["target"] === 'brstm'){
                 $outputPath = "./out/brstm/{id}/{$outputPath}.brstm";
                 $result = $audio->createGeneric($outputPath, $bitrate);
-                $_SESSION["message"] = array(
-                    "passed" => true,
-                    "message" => "<p class=\"card-text\">BRSTM Conversion Complete! You can download it from <a class=\"return_link\" href=\"{$result}\">here!</a></p>"
-                );
             } else if ($_POST["target"] === 'bfstm'){
                 $outputPath = "./out/bfstm/{id}/{$outputPath}.bfstm";
                 $result = $audio->createGeneric($outputPath, $bitrate);
-                $_SESSION["message"] = array(
-                    "passed" => true,
-                    "message" => "<p class=\"card-text\">BFSTM Conversion Complete! You can download it from <a class=\"return_link\" href=\"{$result}\">here!</a></p>"
-                );
             } else if ($_POST["target"] === 'wav'){
                 $outputPath = "./out/wav/{id}/{$outputPath}.wav";
                 $result = Audio::convertToWAV($outputPath, $audio->audioPath);
+            }
+
+            if($result["passed"]){
                 $_SESSION["message"] = array(
                     "passed" => true,
-                    "message" => "<p class=\"card-text\">wav Conversion Complete! You can download it from <a class=\"return_link\" href=\"{$result}\">here!</a></p>"
+                    "message" => "<p class=\"card-text\">Conversion Complete! You can download it from <a class=\"return_link\" href=\"{$result['message']}\">here!</a></p>"
+                );
+            }else{
+                $_SESSION["message"] = array(
+                    "passed" => false,
+                    "message" => "<p class=\"card-text\">Conversion Failed! Here's a log of the error:<br /><pre>{$result['message']}</pre></p></p>"
                 );
             }
+
         }
         Controller::redirect("./index.php?page=audio");
     }
