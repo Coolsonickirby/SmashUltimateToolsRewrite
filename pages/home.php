@@ -201,6 +201,9 @@
                         <h4>
                             <a href="https://fontmeme.com/fonts/super-smash-font/">Smash Font</a> - Pokemon-Diamond
                         </h4>
+                        <h4>
+                            Hosting the Site - <a href="https://twitter.com/FreeAppSW">the binary thinker (@FreeAppSW)</a>
+                        </h4>
                     </div>
                 </div>
                 <br>
