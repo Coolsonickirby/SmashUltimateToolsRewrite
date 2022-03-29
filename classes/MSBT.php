@@ -31,8 +31,12 @@ class MSBT {
             $outputPath
         );
         
-        CommandLineTools::RunMSBTEditorCLI($args);
+        $log = CommandLineTools::RunMSBTEditorCLI($args);
+        
+        if(!file_exists($outputPath)){
+            return Utils::createMessage(false, $log);
+        }
 
-        return $outputPath;
+        return Utils::createMessage(true, $outputPath);
     }
 }

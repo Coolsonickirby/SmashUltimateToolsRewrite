@@ -147,15 +147,25 @@ class Controller {
                 "passed" => false,
                 "message" => "<p class=\"card-text\">Failed to upload file!</p>"
             );
-            Controller::redirect("./index.php");
+            Controller::redirect("./index.php?page={$_GET['source']}");
         };
 
         $outPath = "./out/prcs/{$prc->id}/out.json";
         Utils::createPathWithoutFilename($outPath);
 
         $prc->initalize($targetPath);
-        $prc->convert($outPath);
-        Controller::redirect("./index.php?page={$_GET['source']}&id={$prc->id}");
+        $result = $prc->convert($outPath);
+        
+        if(!$result["passed"]){
+            $_SESSION["message"] = array(
+                "passed" => false,
+                "message" => "<p class=\"card-text\">Conversion Failed! Here's a log of the error:<br /><pre>{$result['message']}</pre></p></p>"
+            );
+            Controller::redirect("./index.php?page={$_GET['source']}");
+        } else {
+            Controller::redirect("./index.php?page={$_GET['source']}&id={$prc->id}");
+        }
+
     }
     
     static function postSavePRC(){
@@ -169,12 +179,20 @@ class Controller {
         Utils::createPathWithoutFilename($outPath);
 
         $prc->initalize($targetPath);
-        $prc->convert($outPath);
+        $result = $prc->convert($outPath);
 
-        header('Content-Type: application/octet-stream');
-        header("Content-Transfer-Encoding: Binary");
-        header("Content-disposition: attachment; filename=\"{$_GET['outputName']}\"");
-        readfile($outPath);
+        if(!$result["passed"]){
+            $_SESSION["message"] = array(
+                "passed" => false,
+                "message" => "<p class=\"card-text\">Conversion Failed! Here's a log of the error:<br /><pre>{$result['message']}</pre></p></p>"
+            );
+            Controller::redirect("./index.php?page={$_GET['source']}");
+        } else {
+            header('Content-Type: application/octet-stream');
+            header("Content-Transfer-Encoding: Binary");
+            header("Content-disposition: attachment; filename=\"{$_GET['outputName']}\"");
+            readfile($outPath);
+        }
     }
 
     static function postOpenMSBT(){
@@ -194,8 +212,16 @@ class Controller {
         Utils::createPathWithoutFilename($outPath);
 
         $msbt->initalize($targetPath);
-        $msbt->convert($outPath);
-        Controller::redirect("./index.php?page={$_GET['source']}&id={$msbt->id}&outputName=" . basename($_FILES["fileInput"]["name"]));
+        $result = $msbt->convert($outPath);
+        if(!$result["passed"]){
+            $_SESSION["message"] = array(
+                "passed" => false,
+                "message" => "<p class=\"card-text\">Conversion Failed! Here's a log of the error:<br /><pre>{$result['message']}</pre></p></p>"
+            );
+            Controller::redirect("./index.php?page={$_GET['source']}");
+        } else {
+            Controller::redirect("./index.php?page={$_GET['source']}&id={$msbt->id}&outputName=" . basename($_FILES["fileInput"]["name"]));
+        }
     }
 
     static function postSaveMSBT()
@@ -210,12 +236,21 @@ class Controller {
         Utils::createPathWithoutFilename($outPath);
 
         $msbt->initalize($targetPath);
-        $msbt->convert($outPath);
+        $result = $msbt->convert($outPath);
 
-        header('Content-Type: application/octet-stream');
-        header("Content-Transfer-Encoding: Binary");
-        header("Content-disposition: attachment; filename=\"{$_GET['outputName']}\"");
-        readfile($outPath);
+        if(!$result["passed"]){
+            $_SESSION["message"] = array(
+                "passed" => false,
+                "message" => "<p class=\"card-text\">Conversion Failed! Here's a log of the error:<br /><pre>{$result['message']}</pre></p></p>"
+            );
+            Controller::redirect("./index.php?page={$_GET['source']}");
+        } else {
+            header('Content-Type: application/octet-stream');
+            header("Content-Transfer-Encoding: Binary");
+            header("Content-disposition: attachment; filename=\"{$_GET['outputName']}\"");
+            readfile($outPath);
+        }
+
     }
 }
 

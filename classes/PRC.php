@@ -33,9 +33,13 @@ class PRC {
             $outputPath
         );
 
-        CommandLineTools::RunPRC2JSON($args);
+        $log = CommandLineTools::RunPRC2JSON($args);
 
-        return $outputPath;
+        if(!file_exists($outputPath)){
+            return Utils::createMessage(false, $log);
+        }
+
+        return Utils::createMessage(true, $outputPath);
     }
 }
 

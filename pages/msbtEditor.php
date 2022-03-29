@@ -34,9 +34,23 @@ if(isset($_GET["outputName"])){
         <input name="fileInput" id='fileInput' type='file' accept=".msbt" hidden />
     </form>
 
-    <form method="post" action="./index.php?page=saveMSBT&outputName=<?php echo $outputName; ?>" enctype="multipart/form-data" id="saveForm">
+    <form method="post" action="./index.php?page=saveMSBT&source=msbtEditor&outputName=<?php echo $outputName; ?>" enctype="multipart/form-data" id="saveForm">
         <input name="json" id="jsonInput" hidden />
     </form>
+
+    <?php
+    if (isset($_SESSION["message"])) {
+        $status = $_SESSION["message"]["passed"] ? array("text-success", "Success!") : array("text-error", "Error!");
+        echo "
+            <div class=\"card\">
+                <div>
+                    <h2 class=\"{$status[0]}\">{$status[1]}</h2>
+                    {$_SESSION['message']['message']}
+                </div>
+            </div>";
+        unset($_SESSION["message"]);
+    }
+    ?>
 
     <div class="buttons">
         <div class="button-parent">

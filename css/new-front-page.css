@@ -1,51 +1,41 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 @media only screen and (max-width:1460px) {
-    .header-desktop{
+    .header-desktop {
         display: none !important;
     }
-
-    .header-mobile{
+    .header-mobile {
         display: grid !important;
     }
-
-    .tab{
+    .tab {
         align-items: center !important;
         width: 100% !important;
         margin: 0 !important;
     }
-
-    .tab .button-parent{
+    .tab .button-parent {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media only screen and (max-width:920px) {
-    .grid-container{
+    .grid-container {
         grid-template-columns: 1fr !important;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr !important;
         gap: 1% 0% !important;
-        grid-template-areas:
-            "."
-            "."
-            "."
-            "."
-            "."
-            "."
-            "." !important;
+        grid-template-areas: "." "." "." "." "." "." "." !important;
     }
 }
 
-
-html, body{
+html,
+body {
     margin: 0;
     height: 100%;
 }
 
-body{
+body {
     margin: 0;
     height: 100%;
     background: url("../img/front-page/bg_test.webp") no-repeat fixed;
@@ -55,43 +45,39 @@ body{
     background-size: cover;
 }
 
-.content{
+.content {
     cursor: default;
 }
 
-.tabcontent{
+.tabcontent {
     display: none;
 }
 
-.tablinks{
+.tablinks {
     font-weight: bold;
 }
 
-.header-desktop{
+.header-desktop {
     text-align: center;
     display: grid;
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr;
     gap: 0px 0px;
-    grid-template-areas:
-      ". . .";
+    grid-template-areas: ". . .";
     margin-bottom: 2.5%;
 }
 
-.header-mobile{
+.header-mobile {
     display: none;
     text-align: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr 0.5fr;
     gap: 0px 0px;
-    grid-template-areas:
-        "."
-        "."
-        ".";
+    grid-template-areas: "." "." ".";
 }
 
-.main{
+.main {
     width: 90%;
     margin: 0 auto;
 }
@@ -102,15 +88,13 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 5% 2%;
-    grid-template-areas:
-      ". . ."
-      ". . .";
+    grid-template-areas: ". . ." ". . .";
 }
 
-.grid-container>img{
+.grid-container>img {
     width: 100%;
     border: 5px solid black;
-    cursor:pointer;
+    cursor: pointer;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -118,20 +102,19 @@ body{
 
 @keyframes cursor-anim {
     0% {
-      background-position: 200% 0%;
+        background-position: 200% 0%;
     }
     100% {
-      background-position: 0% 0%;
+        background-position: 0% 0%;
     }
-  }
+}
 
-.grid-container>img:hover{
+.grid-container>img:hover {
     border: 5px solid transparent;
     background: linear-gradient(90deg, rgb(255, 109, 0) 0%, rgb(255, 255, 0) 65%, rgb(255, 109, 0) 70%);
     background-size: 200% 1px;
     animation: cursor-anim 650ms linear infinite normal;
 }
-
 
 
 /* CREDIT DUE TO W3SCHOOLS FOR ALL THIS */
@@ -167,12 +150,13 @@ body{
     height: 40px;
 }
 
-.button-block{
+.button-block {
     display: block;
     float: none;
     width: 100%;
     height: 100%;
 }
+
 
 /* text-align: center;
 grid-template-columns: 1fr;
@@ -187,7 +171,7 @@ grid-template-areas:
     "."
     "."; */
 
-.button-parent button{
+.button-parent button {
     width: 75px;
     min-height: 40px;
     background-color: #D9E4EA;
@@ -196,13 +180,13 @@ grid-template-areas:
     border: none;
 }
 
-.button-block button{
+.button-block button {
     width: 100%;
     text-align: left;
     font-size: 20px;
 }
 
-.button-block .content{
+.button-block .content {
     padding: 20px;
     background-color: white;
     display: none;
@@ -218,12 +202,10 @@ grid-template-areas:
     border-color: transparent;
 }
 
-.button-parent:hover button{
+.button-parent:hover button {
     color: white;
     background-color: #DF1624;
-    text-shadow: -1px 1px 0 #000,
-    1px 1px 0 #000,
-   1px -1px 0 #000;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
 }
 
 
@@ -233,39 +215,64 @@ grid-template-areas:
     color: white;
     background-color: #DF1624;
     border-color: black;
-    text-shadow: -1px 1px 0 #000,
-    1px 1px 0 #000,
-   1px -1px 0 #000;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
 }
 
-
-.tab-text{
+.tab-text {
     font-size: 19px;
 }
 
-.about{
+.about {
     background-color: white;
     padding: 20px;
     border: 2px solid black;
-
 }
 
-hr{
+hr {
     border-color: black;
 }
 
-a{
+a {
     color: black;
 }
 
-a:visited{
+a:visited {
     color: black;
 }
 
-a:hover{
-    color:black;
+a:hover {
+    color: black;
 }
 
-.strike{
+.strike {
     text-decoration: line-through;
+}
+
+.text-success {
+    color: green;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.text-error {
+    color: red;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: #E9F1F4;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    margin-bottom: 10px;
 }
