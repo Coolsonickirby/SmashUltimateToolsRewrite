@@ -41,6 +41,8 @@ php -S localhost:80
 ```
 10. In your web browser, go to `http://localhost/`
 
+## Linux Setup
+1. Download and install sox with `sudo apt install sox`
 
 ### Optional Stuff
 #### YouTube Conversion Support
