@@ -688,17 +688,24 @@ class Audio
     {
         $info = CommandLineTools::RunSOX(array("--i", "{$this->audioPath}"));
 
-        if(!file_exists($this->audioPath)){
+        preg_match("/(?<=Sample Rate    : )(.*)(?=\n)/", $info, $tmp);
+        
+        if(count($tmp) <= 0){
             return Utils::createMessage(false, $info);
         }
-
-        preg_match("/(?<=Sample Rate    : )(.*)(?=\n)/", $info, $tmp);
+        
         $this->sampleRate = intval($tmp[0]);
-
+        
         preg_match("/(?<== )(.*)(?= samples)/", $info, $tmp);
+        if(count($tmp) <= 0){
+            return Utils::createMessage(false, $info);
+        }
         $this->duration = intval($tmp[0]);
-
+        
         preg_match("/(?<=Channels       : )(.*)(?=\n)/", $info, $tmp);
+        if(count($tmp) <= 0){
+            return Utils::createMessage(false, $info);
+        }
         $this->channels = intval($tmp[0]);
 
         $this->format = pathinfo($this->audioPath, PATHINFO_EXTENSION);
@@ -779,7 +786,10 @@ class Audio
         }
 
         if ($this->loop && $this->usePyMusicLooper) { // Loop based on pymusiclooper
-            $this->findLoopPoints();
+            $log = $this->findLoopPoints();
+            if(isset($log["passed"]) && !$log["passed"]){
+                return $log;
+            }
         } else if ($this->loop && $this->loopEnd <= 0) { // Loop E -> S if loopEnd is equal or below 0 and looping is enabled
             $this->loopEnd = $this->duration;
         }
@@ -797,7 +807,7 @@ class Audio
 
         // Convert to WAV if any one of the requirements are not met
         if ($this->format != "wav" || $this->sampleRate != 48000 || $this->channels > 2) {
-            mkdir("./tmp/wav/", 0777, true);
+            @mkdir("./tmp/wav/", 0777, true);
             $wavLog = Audio::convertToWAV($this->audioPath, "./tmp/wav/{$this->id}.wav", 48000);
             if(!$wavLog["passed"]){
                 return $wavLog;
@@ -806,7 +816,11 @@ class Audio
             $this->audioPath = $wavLog["message"];
         }
 
-        $this->handleLoop();
+        $log = $this->handleLoop();
+        if(isset($log["passed"]) && !$log["passed"]){
+            return $log;
+        }
+
         $lopusArgs = array();
 
         if ($this->loop) {
@@ -838,11 +852,14 @@ class Audio
 
         // Convert to WAV if any one of the requirements are not met
         if ($this->format != "wav" || $this->channels > 2) {
-            mkdir("./tmp/wav/", 0777, true);
+            @mkdir("./tmp/wav/", 0777, true);
             $this->audioPath = Audio::convertToWAV($this->audioPath, "./tmp/wav/{$this->id}.wav", 48000);
         }
 
-        $this->handleLoop();
+        $log = $this->handleLoop();
+        if(isset($log["passed"]) && !$log["passed"]){
+            return $log;
+        }
         $genericArgs = array();
 
         if ($this->loop) {
@@ -878,6 +895,10 @@ class Audio
     public function findLoopPoints()
     {
         $loops = CommandLineTools::RunPyMusicLooper(array("--stdout", $this->audioPath));
+        preg_match("/\d+ \d+/", $loops, $tmp);
+        if(count($tmp) <= 0){
+            return Utils::createMessage(false, $loops);
+        }
         $loops = trim($loops);
         $loops = explode(" ", $loops);
         $this->loopStart = intval($loops[0]);
