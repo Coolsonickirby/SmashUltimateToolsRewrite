@@ -20,9 +20,9 @@ var uiSeriesIds = {};
 
 var nameIds = {};
 
-var stagePlaceIds = {"resultstage": "resultstage", "resultstage_jack": "resultstage_jack"};
+var stagePlaceIds = { "resultstage": "resultstage", "resultstage_jack": "resultstage_jack" };
 
-var secretStagePlaceIds = {"resultstage": "resultstage", "resultstage_jack": "resultstage_jack"};
+var secretStagePlaceIds = { "resultstage": "resultstage", "resultstage_jack": "resultstage_jack" };
 
 var bgmSetIds = {};
 
@@ -31,7 +31,7 @@ var bgmSettingIds = {};
 
 var currentlySelected = 0;
 
-window.onload = function () {
+window.onload = function() {
 
     this.setup();
 
@@ -169,43 +169,43 @@ function setupDropdowns() {
     //#endregion
 
     //#region Setting up event listeners
-    ui_stage_id.addEventListener("input", function (e) {
+    ui_stage_id.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].hash40[0]["#text"] = e.target.value;
     });
 
-    name_id.addEventListener("input", function (e) {
+    name_id.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].string["#text"] = e.target.value;
     });
 
-    ui_series_id.addEventListener("input", function (e) {
+    ui_series_id.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].hash40[1]["#text"] = e.target.value;
     });
 
-    stage_place_id.addEventListener("input", function (e) {
+    stage_place_id.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].hash40[2]["#text"] = e.target.value;
     });
 
-    secret_stage_place_id.addEventListener("input", function (e) {
+    secret_stage_place_id.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].hash40[3]["#text"] = e.target.value;
     });
 
-    bgm_set_id.addEventListener("input", function (e) {
+    bgm_set_id.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].hash40[6]["#text"] = e.target.value;
     });
 
-    bgm_setting_id.addEventListener("input", function (e) {
+    bgm_setting_id.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].byte["#text"] = e.target.value;
     });
 
-    can_demo.addEventListener("input", function (e) {
+    can_demo.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].bool[1]["#text"] = e.target.checked == true ? "True" : "False";
     });
 
-    can_select.addEventListener("input", function (e) {
+    can_select.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].bool[0]["#text"] = e.target.checked == true ? "True" : "False";
     });
 
-    bgm_selector.addEventListener("input", function (e) {
+    bgm_selector.addEventListener("input", function(e) {
         stageData.struct.list.struct[currentlySelected].bool[5]["#text"] = e.target.checked == true ? "True" : "False";
     });
     //#endregion
@@ -266,7 +266,7 @@ function setup() {
             var hidden_stages = document.getElementById("hidden").children;
 
 
-            if(display_stages.length > 128){
+            if (display_stages.length > 128) {
                 alert("The max amount of stages that can be shown is 128!");
                 return;
             }
@@ -329,7 +329,7 @@ function setup() {
             var reader = new FileReader();
 
             // If we use onloadend, we need to check the readyState.
-            reader.onloadend = function (evt) {
+            reader.onloadend = function(evt) {
                 if (evt.target.readyState == FileReader.DONE) { // DONE == 2
                     if (evt.target.result == "paracobn") {
                         document.getElementById("openForm").submit();
@@ -382,10 +382,10 @@ function loadDefault() {
         var answer = confirm("Are you sure you want to load the default ui_stage_db.prc file (You will lose your current order and changes)?");
 
         if (answer) {
-            window.location.href = "/prc/Stage/0";
+            window.location.href = "./index.php?page=prcStage&id=prcStage";
         }
     } else {
-        window.location.href = "/prc/Stage/0";
+        window.location.href = "./index.php?page=prcStage&id=prcStage";
     }
 }
 
@@ -401,14 +401,14 @@ function randomizeSSS() {
  * Thanks to Russ Cam and gruppler for this bit of code
  * https://stackoverflow.com/questions/1533910/randomize-a-sequence-of-div-elements-with-jquery
  */
-(function ($) {
+(function($) {
 
-    $.fn.randomize = function (childElem) {
-        return this.each(function () {
+    $.fn.randomize = function(childElem) {
+        return this.each(function() {
             var $this = $(this);
             var elems = $this.children(childElem);
 
-            elems.sort(function () { return (Math.round(Math.random()) - 0.5); });
+            elems.sort(function() { return (Math.round(Math.random()) - 0.5); });
 
             $this.detach(childElem);
 
