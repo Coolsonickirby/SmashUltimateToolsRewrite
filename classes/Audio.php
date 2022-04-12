@@ -729,7 +729,7 @@ class Audio
             $this->audioPath
         ));
 
-        if(!file_exists($log)){
+        if(!file_exists($outputPath)){
             return Utils::createMessage(false, $log);
         }
 
@@ -886,7 +886,7 @@ class Audio
 
     private function recalculateLoopSamples($srcHz, $targetHz)
     {
-        $resHz = floatval($srcHz) / floatval($targetHz);
+        $resHz = floatval($targetHz) / floatval($srcHz);
 
         $this->loopStart = intval($this->loopStart * $resHz);
         $this->loopEnd = intval($this->loopEnd * $resHz);
