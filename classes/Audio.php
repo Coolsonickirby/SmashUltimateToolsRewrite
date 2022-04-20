@@ -853,9 +853,13 @@ class Audio
         // Convert to WAV if any one of the requirements are not met
         if ($this->format != "wav" || $this->channels > 2) {
             @mkdir("./tmp/wav/", 0777, true);
-            $this->audioPath = Audio::convertToWAV($this->audioPath, "./tmp/wav/{$this->id}.wav", 48000);
-        }
+            $wavLog = Audio::convertToWAV($this->audioPath, "./tmp/wav/{$this->id}.wav", 48000);
+            if(!$wavLog["passed"]){
+                return $wavLog;
+            }
 
+            $this->audioPath = $wavLog["message"];
+        }
         $log = $this->handleLoop();
         if(isset($log["passed"]) && !$log["passed"]){
             return $log;
