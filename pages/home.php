@@ -717,10 +717,12 @@
                     around 4/20/2022, with me rewriting the entire site so that I could ditch the old Laravel framework,
                     as well as getting it to work on linux machines so anyone could easily host it.
                     <br />
+                    <br />
                     I want to give a very big shoutout and thank you to <a href="https://twitter.com/FreeAppSW">the binary thinker (@FreeAppSW)</a>
                     & <a href="https://gbatemp.net/members/ic_.431143/#about">IC</a> (I honestly can't remember if they're the same
                     person or if they were different and I don't have access to my messages with the binary thinker anymore I'm sorry 😭)
                     for hosting the site after I initially shut it down, and kept it going for a while longer.
+                    <br />
                     <br />
                     Now to get to the main part. After shutting down the site, I started focusing more on reverse engineering
                     and code modding. I've had a lot more fun working on DirInfo Addition (c08+ colors), Character Redirection,
@@ -737,10 +739,12 @@
                     There are also a few more reasons that I won't give out (either because it'll be a spoiler or its a minor reason), but yea this site will be coming
                     back up!
                     <br />
+                    <br />
                     Although I did mention earlier that I would like to move the web tools I already made here, it'll still take some time to move them. I'll try
                     and get them here by the end of the week, but I won't gurantee much (I'll need to redesign them so they fit the current style of the site,
                     as well as make the thumbnails for them.) I also am currently job hunting, freelancing, and working on the other projects mentioned before,
                     so I won't be able to dedicate as much time to this site as I did in the past (I'll still take care of bug reports that pop up though.)
+                    <br />
                     <br />
                     I'm looking forward to working on this site once again!
                     `
