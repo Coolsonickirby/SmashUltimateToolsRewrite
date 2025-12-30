@@ -984,6 +984,8 @@ class Audio
             $vgmLog = $this->convertFromVGMStream($outputPath, true);
             if($vgmLog["passed"]){
                 $this->audioPath = $vgmLog["message"];
+            } else {
+                return $vgmLog;
             }
         } else {
             $this->getAudioInformation();
