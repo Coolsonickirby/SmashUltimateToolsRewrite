@@ -5,6 +5,16 @@ require_once("./classes/MSBT.php");
 
 class Controller {
 
+    private static $upload_err = array(
+        "1" => "UPLOAD_ERR_INI_SIZE",
+        "2" => "UPLOAD_ERR_FORM_SIZE",
+        "3" => "UPLOAD_ERR_PARTIAL",
+        "4" => "UPLOAD_ERR_NO_FILE",
+        "6" => "UPLOAD_ERR_NO_TMP_DIR",
+        "7" => "UPLOAD_ERR_CANT_WRITE",
+        "8" => "UPLOAD_ERR_EXTENSION",
+    );
+
     static function redirect($path){
         header("Location: {$path}");
         die();
@@ -73,7 +83,7 @@ class Controller {
                 if (!move_uploaded_file($_FILES["musicFile"]["tmp_name"], $targetPath)) {
                     $_SESSION["message"] = array(
                         "passed" => false,
-                        "message" => "<p class=\"card-text\">Failed to upload file!</p>"
+                        "message" => "<p class=\"card-text\">Failed to upload file! Reason: " . Controller::$upload_err[$_FILES['musicFile']['error']] . "</p>"
                     );
                     Controller::redirect("./index.php?page=audio");
                     die();
