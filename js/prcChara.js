@@ -195,11 +195,12 @@ function showCustomContextMenu(element, e){
 function setup() {
     window.addEventListener("click", function(e){
         var hide_menu = true;
-        for(var i = 0; i < e.path.length; i++){
-            if(e.path[i].classList != undefined){
-                if(e.path[i].classList.contains("item")){
+        var path = e.composedPath();
+        for(var i = 0; i < path.length; i++){
+            if(path[i].classList != undefined){
+                if(path[i].classList.contains("item")){
                     hide_menu = false;
-                }else if(e.path[i].id == "context-menu-controller"){
+                }else if(path[i].id == "context-menu-controller"){
                     hide_menu = false;
                 }
             }

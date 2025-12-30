@@ -6,6 +6,7 @@ class PRC {
 
     public $id = 0;
     public $prcPath = "";
+    public $srcPath = "";
 
     private static function getRandomID()
     {
