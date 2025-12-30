@@ -153,14 +153,14 @@
                 <h1>About</h1>
                 <hr>
                 <p class="tab-text">
-                    Welcome to SmashUltimateTools!
+                    Welcome to Smash Ultimate Tools!
                     <br>
                     <br>
                     This is a site that I made for fun to improve my skills with PHP, HTML, JS, and CSS.
-                    It features a couple of different tools I made over time for modding Smash Ultimate (it's already been a year and a couple of months now!)
+                    It features a couple of different tools I made over time for modding Smash Ultimate (it's already been a year and a couple of months now!) (future self here, it's been more than 4 years now lol)
                     <br>
                     <br>
-                    Currently, progress is slow since I'm busy with College, but hopefully when I'm done I should have time to work on this site more.
+                    <span style="text-decoration: line-through;">Currently, progress is slow since I'm busy with College, but hopefully when I'm done I should have time to work on this site more.</span> Finally finished college & university! Sadly, can't dedicate all my time to this site given the amount of other projects I have, as well as freelancing, but I'll be adding new stuff!
                     <br>
                     <br>
                     If you have the time, then please check out my <a href="https://www.youtube.com/channel/UCUp-3P4BdmQWYCJ7rRyzrbQ/">YouTube Channel</a> where I upload random stuff I'm currently working on (mostly Smush mods, but sometimes other stuff)!
@@ -170,7 +170,7 @@
                     <br>
                     <br>
                     If you're interested in talking about Smush Modding with other people, then feel free to join either of these 2 discords:<br>
-                <ul style="font-weight: bold; line-height: 2;">
+                    <ul style="font-weight: bold; line-height: 2;">
                     <li>
                         <a href="https://discord.gg/ASJyTrZ">Super Smash Bros. Ultimate Modding Discord</a>
                     </li>
@@ -202,7 +202,7 @@
                             <a href="https://fontmeme.com/fonts/super-smash-font/">Smash Font</a> - Pokemon-Diamond
                         </h4>
                         <h4>
-                            Hosting the Site - <a href="https://twitter.com/FreeAppSW">the binary thinker (@FreeAppSW)</a>
+                            Hosting the Site - <a href="https://twitter.com/FreeAppSW">the binary thinker (@FreeAppSW)</a> & <a href="https://gbatemp.net/members/ic_.431143/#about">IC</a>
                         </h4>
                     </div>
                 </div>
@@ -506,8 +506,8 @@
                                 bandwidth,
                                 and speed at a cheaper price.</span> <span class="strike">Change of plans: MSBTEditorCli
                                 only works with .NET 4.0 and I
-                                don't know how to get that to work with Linux.</span> I can move everything over to linux,
-                            but now I'm pretty comfy with Windows Server.</p>
+                                don't know how to get that to work with Linux.</span> <span class="strike">I can move everything over to linux,
+                            but now I'm pretty comfy with Windows Server.</span> It's now running on my linux server!</p>
                     </div>
                 </div>
                 <br>
@@ -545,7 +545,7 @@
                 <div class="button-parent button-block">
                     <button type="button" class="collapsible-PAQ">Where can I find this website's source code?</button>
                     <div class="content">
-                        <p><a href="https://github.com/Coolsonickirby/smashultimatewebtools">Here.</a></p>
+                        <p><a href="https://github.com/Coolsonickirby/SmashUltimateToolsRewrite">Here.</a></p>
                     </div>
                 </div>
                 <br>
@@ -554,7 +554,7 @@
                         There's an error in your website. / Can you add
                         _______?</button>
                     <div class="content">
-                        <p>Contact me on discord @ Coolsonickirby#4030.</p>
+                        <p>Contact me on discord @ coolsonickirby</p>
                     </div>
                 </div>
                 <br>
@@ -584,14 +584,15 @@
                     <button type="button" class="collapsible-ToDo">CSS Editor</button>
                     <div class="content">
                         <ul>
-                            <li>Revamp the design and make it look nicer (cleaner? can't find a better term)</li>
-                            <li>Add Echo Character Selection</li>
-                            <li>Add Sopo, Sana, proper Ivy, proper Squirtle, and proper Charizard slots</li>
-                            <li>Add announcer voice selection</li>
+                            <li><span class="strike">Revamp the design and make it look nicer (cleaner? can't find a better term)</span></li>
+                            <li><span class="strike">Add Echo Character Selection</span></li>
+                            <li><span class="strike">Add Sopo, Sana, proper Ivy, proper Squirtle, and proper Charizard slots</span></li>
+                            <li><span class="strike">Add announcer voice selection</span></li>
                             <li><span class="strike">Fix Gamma Issue? (not sure if the fix I applied to it is good or
                                     not.)</span> Done</li>
-                            <li>Add Ability to Change Costume Amount</li>
-                            <li>Add Ability to change Character Tips order</li>
+                            <li><span class="strike">Add Ability to Change Costume Amount</span></li>
+                            <li><span class="strike">Add Ability to change Character Tips order</span></li>
+                            <li>Migrate the entire CSS Manager functionality and features here</li>
                         </ul>
                     </div>
                 </div>
@@ -624,10 +625,10 @@
                             <li>Add more stuff
                                 <ul>
                                     <li>BGM DB Editor (On Hold for now since Sma5hMusic exists)</li>
-                                    <li>Damage Color Editor (Thanks to zrksyd for the idea)</li>
+                                    <li><span class="strike">Damage Color Editor (Thanks to zrksyd for the idea)</span> Done</li>
                                 </ul>
                             </li>
-                            <li>Fill in the About Tab</li>
+                            <li><span class="strike">Fill in the About Tab</span> Done</li>
                             <li>Clean up any bugs (tbh I didn't encounter as much as I thought I would)</li>
                             <li><span class="strike">Add CSS to make the To-Do List look more cleaner</span> Done</li>
                         </ul>
@@ -708,6 +709,41 @@
                 as well as some networking stuff. Hopefully when I'm done with my current semester, I'll add a new tool
                 I've been thinking about (although it will be a HUGE undertaking). Thank you to everyone who used this
                 site and I look forward to another year!`
+                },
+                {
+                    date: `12/30/2025`,
+                    text: `Wow, it really has been a few years already since I last touched this project. Ended up getting my
+                    Bachelor's Degree (was working on my Associate's when I first made this site!) The actual final update was
+                    around 4/20/2022, with me rewriting the entire site so that I could ditch the old Laravel framework,
+                    as well as getting it to work on linux machines so anyone could easily host it.
+                    <br />
+                    I want to give a very big shoutout and thank you to <a href="https://twitter.com/FreeAppSW">the binary thinker (@FreeAppSW)</a>
+                    & <a href="https://gbatemp.net/members/ic_.431143/#about">IC</a> (I honestly can't remember if they're the same
+                    person or if they were different and I don't have access to my messages with the binary thinker anymore I'm sorry 😭)
+                    for hosting the site after I initially shut it down, and kept it going for a while longer.
+                    <br />
+                    Now to get to the main part. After shutting down the site, I started focusing more on reverse engineering
+                    and code modding. I've had a lot more fun working on DirInfo Addition (c08+ colors), Character Redirection,
+                    the CSS Manager, The CSK Collection, Stage Redirection, Extra Color Patches, Lazy Loading UI,
+                    Custom Palutena's Guidance, and other stuff than I've had working on the site, however, I also still made
+                    <a href="https://coolsonickirby.com/arc/">web tools to assist with Ultimate modding</a>. The revival of this
+                    site is for a few reasons:
+                    <ol>
+                        <li>I've finally finished college & university</li>
+                        <li>I've had this server for a while now and it's been pretty reliable (everytime something went wrong it was on my end lol)</li>
+                        <li>I have more helpful tools already made that would be better off in a place where it's easier to access them instead of being locked behind "getting lucky on discord and someone mentioning my hidden folder on my main domain"</li>
+                        <li>I still haven't given up on the new tool I mentioned about in my previous update from 4 years ago (+ with more knowledge and experience under my belt, I'll be able to do it much better than my original plan of attack)</li>
+                    </ol>
+                    There are also a few more reasons that I won't give out (either because it'll be a spoiler or its a minor reason), but yea this site will be coming
+                    back up!
+                    <br />
+                    Although I did mention earlier that I would like to move the web tools I already made here, it'll still take some time to move them. I'll try
+                    and get them here by the end of the week, but I won't gurantee much (I'll need to redesign them so they fit the current style of the site,
+                    as well as make the thumbnails for them.) I also am currently job hunting, freelancing, and working on the other projects mentioned before,
+                    so I won't be able to dedicate as much time to this site as I did in the past (I'll still take care of bug reports that pop up though.)
+                    <br />
+                    I'm looking forward to working on this site once again!
+                    `
                 }
             ];
 

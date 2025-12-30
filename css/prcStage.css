@@ -164,6 +164,7 @@ label {
     place-items: center;
     border: 5px solid transparent;
     padding: 1%;
+    width: 100%;
 }
 
 .item {

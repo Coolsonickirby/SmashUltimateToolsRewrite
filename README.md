@@ -34,15 +34,28 @@ This is a re-write of the original [Smash Ultimate Tools](https://github.com/Coo
 5. Make sure `dotnet` is in your path (run the `dotnet` command in Command Prompt and see if it runs)
 6. If it doesn't run, then add the path where `dotnet` was installed to your System PATH Environment Variable
 7. Download this repo and extract it somewhere on your PC
-8. Open up command prompt and navigate to the repo folder
-9. Run the following command
+8. Copy `config_sample.php` to `config.php`
+9. Open up command prompt and navigate to the repo folder
+10. Run the following command
 ```
 php -S localhost:80
 ```
-10. In your web browser, go to `http://localhost/`
+11. In your web browser, go to `http://localhost/`
 
-## Linux Setup
-1. Download and install sox with `sudo apt install sox`
+## Linux Setup (Make sure you're root/sudoing)
+1. Download and install sox with `apt install sox`
+2. Download and install all supported formats for sox with `apt install libsox-fmt-all`
+3. Get the `dotnet-install.sh` script from [here](https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual#scripted-install), then run the following commands:
+```bash
+chmod +x dotnet-install.sh
+./dotnet-install.sh --runtime dotnet --version 2.0.9
+./dotnet-install.sh --runtime dotnet --version 5.0.3
+./dotnet-install.sh --runtime dotnet --version 6.0.3
+```
+4. Create a symlink for the installed dotnet binary using `ln -s <Path to dotnet executable> /bin/dotnet`
+5. Run the setup script `chmod +x setup.sh && ./setup.sh`
+6. Copy `config_sample.php` to `config.php`
+7. Run the php server using `php -S localhost:80` (or set it up with Apache/nginx/w/e)
 
 ### Optional Stuff
 #### YouTube Conversion Support
