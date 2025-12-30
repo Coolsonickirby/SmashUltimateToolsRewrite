@@ -351,7 +351,7 @@
                             <li>Click "Convert"</li>
                             <li>Profit</li>
                         </ol>
-                        <p>You can only convert BRSTMs directly to nus3audio using the main converter.</p>
+                        <p><span class="strike">You can only convert BRSTMs directly to nus3audio using the main converter.</span> You can now convert any file supported by vgmstream to a nus3audio directly!</p>
                     </div>
                 </div>
                 <br>
