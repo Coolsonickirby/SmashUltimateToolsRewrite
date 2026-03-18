@@ -196,7 +196,7 @@
                         </h4>
                         <h4>
                             <a href="https://www.youtube.com/watch?v=pAtd6NBvVA0">Major help with the redesign for the 1
-                                year anniversary</a> - <a href="https://www.youtube.com/watch?v=pAtd6NBvVA0">Pizza 3.14</a>
+                                year anniversary</a> - <a href="https://www.youtube.com/watch?v=pAtd6NBvVA0">Tornadodobird</a>
                         </h4>
                         <h4>
                             <a href="https://fontmeme.com/fonts/super-smash-font/">Smash Font</a> - Pokemon-Diamond

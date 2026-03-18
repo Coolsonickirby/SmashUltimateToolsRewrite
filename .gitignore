@@ -2,3 +2,6 @@ out/
 tmp/
 *.mp3
 config.php
+
+test.php
+convert_batch.php
